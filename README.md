@@ -1,46 +1,65 @@
-PhishGuard: A Full-Stack Phishing Detector
-PhishGuard is a full-stack application designed to protect users from malicious websites in real-time. It operates as a Chrome extension with a Python-based FastAPI backend, leveraging the power of the Gemini API and Google Search Grounding to analyze URLs and webpage content for potential threats.
+# 🛡️ PhishGuard: A Full-Stack Phishing Detector
 
-Features
-Real-time Analysis: Instantly checks the safety of any webpage with a single click.
+Yo, check out **PhishGuard**. It's this super cool app that's built to keep you safe from sketchy websites in real-time.  
+It's a **Chrome extension**, but it's got a **Python-based FastAPI backend** working behind the scenes.  
+It uses **Google's Gemini API** and **Google Search Grounding** to check out URLs and webpage content to find any hidden dangers.
 
-AI-Powered Verdicts: Uses a large language model (LLM) to provide a clear "Phishing" or "Legitimate" verdict.
+---
 
-Grounded Responses: The LLM's analysis is enhanced with real-time information from Google Search for improved accuracy.
+## 🚀 What it Does
+- **Real-time Checks**: Scans any webpage in a flash with just one click.  
+- **AI-Powered Answers**: An awesome AI gives you a straight-up **"Phishing"** or **"Legitimate"** verdict. No confusing stuff, lol.  
+- **Smart Info**: The AI's analysis gets a boost with real-time info from Google Search. It's way more accurate because of it.  
+- **Super Secure**: It keeps the frontend (the extension) separate from the backend (the FastAPI server) so your API key stays safe and sound.  
 
-Secure Architecture: Separates the frontend (Chrome extension) from the backend (FastAPI server) to protect the API key and handle complex processing.
+---
 
-Requirements
-To run the FastAPI backend, you need Python 3.9 or newer and the following packages, which can be installed using the provided requirements.txt file:
+## 🛠️ Stuff You'll Need
+To get the **FastAPI backend** running, you'll need **Python 3.9 or newer**, plus these packages you can install with the `requirements.txt` file we've got:
 
-fastapi
+- fastapi  
+- uvicorn  
+- google-generativeai  
+- python-dotenv  
 
-uvicorn
+---
 
-google-generativeai
+## ⚡ How to Get It Running
 
-python-dotenv
+### 1️⃣ Fire up the FastAPI Backend
+**Get the Dependencies:**  
+Make sure you've got Python, then run this command in your terminal to grab all the needed packages:
 
-How to Run
-1. Set up the FastAPI Backend
-Install Dependencies: Make sure you have Python installed, then run the following command in your terminal to install the necessary packages.
-
+```bash
 pip install -r requirements.txt
+```
 
+**Add Your API Key:**  
+Create a file called `.env` in the same folder as `main.py` and drop your Gemini API key in there:
 
-Add your API Key: Create a file named .env in the same directory as main.py and add your Gemini API key.
-
+```env
 API_KEY="your_api_key_here"
+```
 
+**Run the Server:**  
+Start the FastAPI server with Uvicorn. It's gonna be running locally at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-Run the Server: Start the FastAPI server using Uvicorn. The server will run locally on http://127.0.0.1:8000.
-
+```bash
 uvicorn main:app --reload
+```
 
+---
 
-2. Install the Chrome Extension
-Load the Extension: In Chrome, go to chrome://extensions, enable "Developer mode" in the top-right corner, and click "Load unpacked."
+### 2️⃣ Install the Chrome Extension
+**Load it Up:**  
+In Chrome, go to `chrome://extensions`, flip on **"Developer mode"** in the top-right corner, and click **"Load unpacked."**
 
-Select Files: Select the folder containing your popup.html, popup.js, and manifest.json files.
+**Pick the Files:**  
+Just pick the folder with your `popup.html`, `popup.js`, and `manifest.json` files. Easy peasy.
 
-Use the Detector: A new "PhishGuard" icon will appear in your toolbar. Click it on any page to begin the analysis.
+**Start Using It:**  
+You'll see a cool new **PhishGuard** icon on your toolbar. Click it on any page, and it'll start scanning for you!  
+
+---
+
+✨ Stay safe from scams with **PhishGuard**!  
