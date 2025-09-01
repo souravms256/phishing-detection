@@ -1,6 +1,6 @@
 {
 "manifest_version": 3,
-"name": "Phishing Detector",
+"name": "PhishGuard",
 "version": "1.0",
 "description": "Detects phishing websites using a FastAPI backend.",
 "permissions": ["activeTab", "scripting"],

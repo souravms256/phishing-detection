@@ -7,7 +7,7 @@ from pydantic import BaseModel
 import google.generativeai as genai
 
 # Configure Gemini API
-API_KEY = ""
+API_KEY = "AIzaSyA1ehn5SAD2l3McMTRiMP6BBEZK6b9NWrc"
 genai.configure(api_key=API_KEY)
 
 model = genai.GenerativeModel(
